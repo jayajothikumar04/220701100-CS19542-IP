@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Search Suggestions</h2>
+        <input type="text" id="searchInput" placeholder="Type to search..." onkeydown="showSuggestions(event)">
+        <ul id="suggestionsList"></ul>
+        <script>
+            function showSuggestions(event) {
+                var input = document.getElementById("searchInput").value;
+                var suggestions = ["apple", "banana", "cherry", "date", "elderberry"];
+                var filteredSuggestions = suggestions.filter(function(suggestion) {
+                    return suggestion.startsWith(input);
+                });
+                var suggestionsList = document.getElementById("suggestionsList");
+                suggestionsList.innerHTML = "";
+                filteredSuggestions.forEach(function(suggestion) {
+                    var listItem = document.createElement("li");
+                    listItem.innerText = suggestion;
+                    suggestionsList.appendChild(listItem);
+                });
+            }
+        </script>
+    </body>
+</html>

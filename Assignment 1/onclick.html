@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Reveal a Hidden Message</h2>
+        <button id="clickBtn">Show Secret Message</button>
+        <p id="clickResult" style="display:none;">This is the secret message!</p>
+        <script>
+            document.getElementById("clickBtn").onclick = function() {
+                document.getElementById("clickResult").style.display = "block";
+            };
+        </script>
+    </body>
+</html>

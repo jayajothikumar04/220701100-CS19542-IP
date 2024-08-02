@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Contact Form</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <input type="submit" value="Submit">
+        </form>
+        <p id="submitResult"></p>
+        <script>
+            function validateForm() {
+                var email = document.getElementById("email").value;
+                if (email == "") {
+                    document.getElementById("submitResult").innerText = "Email cannot be empty!";
+                    return false;
+                }
+                document.getElementById("submitResult").innerText = "Form submitted! Email: " + email;
+                return true;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Select an Item to See Its Price</h2>
+        <select id="itemSelect" onchange="updatePrice()">
+            <option value="0">Select an item</option>
+            <option value="10">Apple - $10</option>
+            <option value="15">Banana - $15</option>
+            <option value="20">Cherry - $20</option>
+        </select>
+        <p id="priceResult">Price: $0</p>
+        <script>
+            function updatePrice() {
+                var select = document.getElementById("itemSelect");
+                document.getElementById("priceResult").innerText = "Price: $" + select.value;
+            }
+        </script>
+    </body>
+</html>

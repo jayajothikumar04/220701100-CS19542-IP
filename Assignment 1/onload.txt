@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Welcome Message</h2>
+        <p id="loadResult"></p>
+        <script>
+            window.onload = function() {
+                document.getElementById("loadResult").innerText = "Welcome to our website!";
+            };
+        </script>
+    </body>
+</html>
